@@ -85,28 +85,57 @@
             box-shadow: 0 0 15px #ba68c8;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        .student-card {
-            width: 130px;
-            text-align: center;
-            font-size: 0.9em;
-        }
-        .student-card:hover {
-            transform: scale(1.05);
-        }
-        .student-img {
-            width: 125px;
-            height: 125px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 1px solid #5e239d;
-            margin-bottom: 8px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .student-img:hover {
-            transform: scale(1.5); /* Increase size by 50% */
-            box-shadow: 0 0 15px #c084fc;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+       .student-card {
+    position: relative;
+    width: 130px;
+    text-align: center;
+    font-size: 0.9em;
+    overflow: hidden;
+}
+
+/* Add blur background layer */
+.student-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(6px);
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Blur activates when image is hovered */
+.student-img:hover + strong,
+.student-img:hover ~ ::before,
+.student-img:hover ~ * {
+    z-index: 1;
+}
+
+.student-card:hover::before {
+    opacity: 1;
+}
+
+.student-img {
+    position: relative;
+    z-index: 1;
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #5e239d;
+    margin-bottom: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Image scaling and shadow on hover */
+.student-img:hover {
+    transform: scale(1.5); /* Increase size by 50% */
+    box-shadow: 0 0 15px #c084fc;
+}
+
         details summary {
             cursor: pointer;
             font-weight: bold;
