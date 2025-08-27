@@ -5,147 +5,118 @@
         <title>Rite of Offering Ankle Bells – Schedule</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <style>
-            /* ---------- Base Styles ---------- */
+            /* Base styles - Mobile First */
             body {
                 font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-                background: #f5f0fa; /* Soft lavender */
-                color: #3c2a4d; /* Rich purple-gray */
-                padding: 20px;
-                max-width: 800px;
-                margin: auto;
+                background: #f5f0fa;
+                color: #3c2a4d;
+                padding: 16px;
+                margin: 0;
+                font-size: 16px;
+                line-height: 1.5;
             }
 
-            h1,h2 {
-                color: #5e239d; /* Royal purple */
+            /* Headings */
+            h1,
+            h2 {
+                color: #5e239d;
                 text-align: center;
+                margin-top: 1em;
+                margin-bottom: 0.5em;
             }
 
+            /* Section containers */
             .section {
                 margin-bottom: 20px;
                 background-color: #ffffff;
-                padding: 15px;
+                padding: 16px;
                 border-radius: 8px;
                 box-shadow: 0 2px 6px rgba(94, 35, 157, 0.1);
             }
 
+            /* Event time styling */
             .event-time {
                 font-weight: bold;
                 margin-top: 10px;
-                color: #7a1fa2; /* Muted purple */
+                color: #7a1fa2;
             }
 
-            .item {
-                margin-left: 10px;
-            }
-
+            /* Performance block */
             .performance {
-                margin-left: 15px;
-                padding: 15px;
-                background: linear-gradient(to right, #f3e5f5, #ede7f6); /* Light purple gradient */
-                border-left: 8px solid #ffc107; /* Brighter gold + thicker */
+                margin-top: 16px;
+                padding: 16px;
+                background: linear-gradient(to right, #f3e5f5, #ede7f6);
+                border-left: 8px solid #ffc107;
                 border-radius: 6px;
-                margin-top: 15px;
-                box-shadow: 1px 2px 4px rgba(0,0,0,0.05);
+                box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.05);
                 position: relative;
-                transition: filter 0.3s ease;
-            }
-            .performance::before {
-                content: '';
-                position: absolute;
-                left: 0;
-                top: 0;
-                height: 100%;
-                width: 8px;
-                background: linear-gradient(to bottom, #ffd54f, #ffa000);
-                border-radius: 6px 0 0 6px;
-            }
-            .performance strong {
-                color: #4a148c; /* Deep purple for titles */
             }
 
-            .performance:hover {
-                background: linear-gradient(to right, #e1bee7, #d1c4e9);
-                transition: background 0.3s ease-in-out;
+            /* Performance hover (only relevant on desktop) */
+            @media (min-width: 768px) {
+                .performance:hover {
+                    background: linear-gradient(to right, #e1bee7, #d1c4e9);
+                    transition: background 0.3s ease-in-out;
+                }
             }
 
-            .footer {
-                font-size: 1.1em;
-                text-align: center;
-                margin-top: 40px;
-                color: #512da8;
-            }
-
-            /* ---------- Guru Styles ---------- */
+            /* Guru card */
             .guru-card {
-                width: 130px;
-                text-align: center;
-                font-size: 0.9em;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: fit-content;
                 margin: auto;
-            }
-
-            .guru-card:hover {
-                transform: scale(1.05);
+                text-align: center;
             }
 
             .guru-img {
-                width: 200px;
-                height: 200px;
+                width: 120px;
+                height: 120px;
                 border-radius: 50%;
                 object-fit: cover;
                 border: 2px solid #5e239d;
                 margin-bottom: 8px;
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
             }
 
-            .guru-img:hover {
-                transform: scale(1.1);
-                box-shadow: 0 0 15px #ba68c8;
+            /* Student layout - image left, name right */
+            .student-list-wrapper {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                margin-top: 12px;
             }
 
-            /* ---------- Student Styles ---------- */
+            /* Individual student card */
             .student-card {
-                position: relative;
-                width: 130px;
-                text-align: center;
-                font-size: 0.9em;
-                overflow: visible;
+                display: flex;
+                align-items: center;
+                background: #f9f6fc;
+                border-radius: 6px;
+                box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+                padding: 10px 14px;
+                gap: 12px;
+                width: 100%;
             }
 
+            /* Student image */
             .student-img {
-                width: 125px;
-                height: 125px;
+                width: 60px;
+                height: 60px;
                 border-radius: 50%;
                 object-fit: cover;
                 border: 1px solid #5e239d;
-                margin-bottom: 8px;
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-                position: relative;
-                z-index: 1;
-                cursor: pointer;
+                flex-shrink: 0;
             }
 
-            /* Bring student image to forefront on hover */
-            .student-img:hover {
-                transform: scale(1.5);
-                box-shadow: 0 0 15px #c084fc;
-                z-index: 9999;
-                position: absolute;
-                top: -30px;
-                left: -30px;
-                background: white;
+            /* Name beside image */
+            .student-card strong {
+                font-size: 1em;
+                color: #4a148c;
+                text-align: left;
             }
 
-            /* Performance Blur Mode */
-            .performance.blur {
-                filter: blur(4px);
-                pointer-events: none;
-            }
-
-            .performance.blur .student-card {
-                pointer-events: auto;
-            }
-
-            /* ---------- Lyrics Formatting ---------- */
+            /* Expandable details */
             details summary {
                 cursor: pointer;
                 font-weight: bold;
@@ -160,6 +131,7 @@
                 line-height: 1.5;
             }
 
+            /* Lyrics formatting */
             p.lyrics {
                 text-indent: -2.2em;
                 padding-left: 2.2em;
@@ -173,83 +145,40 @@
                 margin-bottom: 0.5em;
             }
 
-            /* ---------- Responsive Layout for Student Grid ---------- */
-            .performance.student-list {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 20px;
+            /* Footer */
+            .footer {
+                font-size: 1em;
+                text-align: center;
+                margin-top: 40px;
+                color: #512da8;
+                padding-bottom: 30px;
             }
 
-            /* ---------- Global Image Handling ---------- */
-            img {
-                max-width: 100%;
-                height: auto;
-            }
-
-            /* ---------- Mobile Responsive Styling ---------- */
-            @media (max-width: 600px) {
+            /* Responsive Tweaks */
+            @media (min-width: 768px) {
                 body {
-                    padding: 10px;
-                    font-size: 0.95em;
+                    max-width: 800px;
+                    margin: auto;
                 }
 
-                h1,
-                h2 {
-                    font-size: 1.4em;
+                .guru-img {
+                    width: 140px;
+                    height: 140px;
                 }
 
-                .section {
-                    padding: 12px;
-                    margin-bottom: 15px;
-                }
-
-                .performance {
-                    padding: 12px;
-                    margin-top: 12px;
-                }
-
-                .guru-card,
-                .student-card {
-                    width: 100px;
-                    font-size: 0.8em;
-                }
-
-                .guru-img,
                 .student-img {
-                    width: 100px;
-                    height: 100px;
-                }
-
-                .student-img:hover {
-                    /* Disable hover scale on mobile to prevent layout shift */
-                    transform: none;
-                    box-shadow: none;
-                    position: static;
-                    z-index: auto;
-                }
-
-                .performance {
-                    border-left: 10px solid #ffb300; /* Boldest gold for small screens */
-                    padding-left: 12px;
-                }
-
-                .performance.student-list {
-                    flex-direction: column;
-                    align-items: center;
+                    width: 75px;
+                    height: 75px;
                 }
 
                 .student-card {
-                    margin-bottom: 12px;
+                    font-size: 1.1em;
                 }
 
-                details p {
-                    font-size: 0.9em;
-                }
-
-                .footer {
-                    font-size: 1em;
-                    padding: 10px 0;
+                .student-card:hover .student-img {
+                    transform: scale(1.1);
+                    box-shadow: 0 0 12px #c084fc;
+                    transition: transform 0.3s ease, box-shadow 0.3s ease;
                 }
             }
         </style>
