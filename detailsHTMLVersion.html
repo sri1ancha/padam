@@ -44,13 +44,26 @@
             /* Performance block */
             .performance {
                 margin-top: 16px;
-                padding: 16px;
-                background: linear-gradient(to right, #f3e5f5, #ede7f6);
-                border-left: 8px solid #ff9800;
+                padding: 16px 16px 16px 24px;
+                background: linear-gradient(to right, #f0d9ff, #e8d9ff);
+                border-left: 12px solid #ffb300;
                 border-radius: 6px;
-                box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.05);
+                box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1);
                 position: relative;
             }
+            /*
+            .performance::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 10px;
+                background-color: #ffb300;
+                border-top-left-radius: 6px;
+                border-bottom-left-radius: 6px;
+            }
+            */
 
             /* Performance hover (only relevant on desktop) */
             @media (min-width: 768px) {
