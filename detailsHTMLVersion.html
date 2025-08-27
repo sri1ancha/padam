@@ -1,465 +1,507 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Rite of Offering Ankle Bells – Schedule</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f5f0fa; /* Soft lavender */
-            color: #3c2a4d; /* Rich purple-gray */
-            padding: 20px;
-            max-width: 800px;
-            margin: auto;
-        }
+    <head>
+        <meta charset="UTF-8" />
+        <title>Rite of Offering Ankle Bells – Schedule</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <style>
+            /* ---------- Base Styles ---------- */
+            body {
+                font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                background: #f5f0fa; /* Soft lavender */
+                color: #3c2a4d; /* Rich purple-gray */
+                padding: 20px;
+                max-width: 800px;
+                margin: auto;
+            }
 
-        h1, h2 {
-            color: #5e239d; /* Royal purple */
-            text-align: center;
-        }
+            h1,h2 {
+                color: #5e239d; /* Royal purple */
+                text-align: center;
+            }
 
-        .section {
-            margin-bottom: 20px;
-            background-color: #ffffff;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 6px rgba(94, 35, 157, 0.1);
-        }
+            .section {
+                margin-bottom: 20px;
+                background-color: #ffffff;
+                padding: 15px;
+                border-radius: 8px;
+                box-shadow: 0 2px 6px rgba(94, 35, 157, 0.1);
+            }
 
-        .event-time {
-            font-weight: bold;
-            margin-top: 10px;
-            color: #7a1fa2; /* Muted purple */
-        }
+            .event-time {
+                font-weight: bold;
+                margin-top: 10px;
+                color: #7a1fa2; /* Muted purple */
+            }
 
-        .item {
-            margin-left: 10px;
-        }
+            .item {
+                margin-left: 10px;
+            }
 
-        .performance {
-            margin-left: 15px;
-            padding: 15px;
-            background: linear-gradient(to right, #f3e5f5, #ede7f6); /* Light purple gradient */
-            border-left: 5px solid #ffca28; /* Gold accent */
-            border-radius: 6px;
-            margin-top: 15px;
-            box-shadow: 1px 2px 4px rgba(0,0,0,0.05);
-        }
+            .performance {
+                margin-left: 15px;
+                padding: 15px;
+                background: linear-gradient(to right, #f3e5f5, #ede7f6); /* Light purple gradient */
+                border-left: 5px solid #ffca28; /* Gold accent */
+                border-radius: 6px;
+                margin-top: 15px;
+                box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.05);
+                position: relative;
+                transition: filter 0.3s ease;
+            }
 
-        .performance strong {
-            color: #4a148c; /* Deep purple for titles */
-        }
+            .performance strong {
+                color: #4a148c; /* Deep purple for titles */
+            }
 
-        .footer {
-            font-size: 1.1em;
-            text-align: center;
-            margin-top: 40px;
-            color: #512da8;
-        }
+            .performance:hover {
+                background: linear-gradient(to right, #e1bee7, #d1c4e9);
+                transition: background 0.3s ease-in-out;
+            }
 
-        /* Optional: Hover effect */
-        .performance:hover {
-            background: linear-gradient(to right, #e1bee7, #d1c4e9);
-            transition: background 0.3s ease-in-out;
-        }
-         .guru-card {
-            width: 130px;
-            text-align: center;
-            font-size: 0.9em;
-        }
-        .guru-card:hover {
-            transform: scale(1.05);
-        }
-        .guru-img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid #5e239d;
-            margin-bottom: 8px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .guru-img:hover {
-            transform: scale(1.2); /* Increase size by 20% */
-            box-shadow: 0 0 15px #ba68c8;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-       .student-card {
-    position: relative;
-    width: 130px;
-    text-align: center;
-    font-size: 0.9em;
-    overflow: hidden;
-}
+            .footer {
+                font-size: 1.1em;
+                text-align: center;
+                margin-top: 40px;
+                color: #512da8;
+            }
 
-.performance {
-  position: relative;
-  transition: filter 0.3s ease;
-}
+            /* ---------- Guru Styles ---------- */
+            .guru-card {
+                width: 130px;
+                text-align: center;
+                font-size: 0.9em;
+                margin: auto;
+            }
 
-/* When performance is blurred */
-.performance.blur {
-  filter: blur(4px);
-  pointer-events: none; /* optional: disables interactions */
-}
+            .guru-card:hover {
+                transform: scale(1.05);
+            }
 
-/* student-card and image: allow interactions */
-.performance.blur .student-card {
-  pointer-events: auto;
-}
+            .guru-img {
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                object-fit: cover;
+                border: 2px solid #5e239d;
+                margin-bottom: 8px;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
 
-/* Student image style */
-.student-img {
-  width: 125px;
-  height: 125px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 1px solid #5e239d;
-  margin-bottom: 8px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
-  z-index: 1;
-  cursor: pointer;
-}
+            .guru-img:hover {
+                transform: scale(1.1);
+                box-shadow: 0 0 15px #ba68c8;
+            }
 
-/* Hover on image: scale and bring on top */
-.student-img:hover {
-  transform: scale(1.5);
-  box-shadow: 0 0 15px #c084fc;
-  z-index: 10;
-  pointer-events: auto;
-  position: relative;
-}
+            /* ---------- Student Styles ---------- */
+            .student-card {
+                position: relative;
+                width: 130px;
+                text-align: center;
+                font-size: 0.9em;
+                overflow: visible;
+            }
 
+            .student-img {
+                width: 125px;
+                height: 125px;
+                border-radius: 50%;
+                object-fit: cover;
+                border: 1px solid #5e239d;
+                margin-bottom: 8px;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                position: relative;
+                z-index: 1;
+                cursor: pointer;
+            }
 
-        details summary {
-            cursor: pointer;
-            font-weight: bold;
-            color: #6a1b9a;
-            margin-top: 10px;
-        }
+            /* Bring student image to forefront on hover */
+            .student-img:hover {
+                transform: scale(1.5);
+                box-shadow: 0 0 15px #c084fc;
+                z-index: 9999;
+                position: absolute;
+                top: -30px;
+                left: -30px;
+                background: white;
+            }
 
-        details p {
-            margin-top: 10px;
-            padding-left: 10px;
-            color: #4a148c;
-            line-height: 1.5;
-        }
-        
-        p.lyrics {
-            text-indent: -2.2em;
-            padding-left: 2.2em;
-            white-space: pre-line;
-            margin: 1em 0;
-        }
+            /* Performance Blur Mode */
+            .performance.blur {
+                filter: blur(4px);
+                pointer-events: none;
+            }
 
-        p.lyrics br {
-            display: block;
-            content: "";
-            margin-bottom: 0.5em;
-        }
-    </style>
-</head>
-<body>
+            .performance.blur .student-card {
+                pointer-events: auto;
+            }
 
-<h1> ॐ Rite of Offering Ankle Bells ॐ </h1>
+            /* ---------- Lyrics Formatting ---------- */
+            details summary {
+                cursor: pointer;
+                font-weight: bold;
+                color: #6a1b9a;
+                margin-top: 10px;
+            }
 
-<h2>📅 Where Abouts</h2>
-<div class="performance">
-    <p><strong>Date:</strong> Sunday, September 21, 2025</p>
-    <p><strong>Time:</strong> 2:00 PM – 5:00 PM</p>
-    <p><strong>Location:</strong> Keefe Tech, 750 Winter St, Framingham, MA 01702</p>
-</div>
+            details p {
+                margin-top: 10px;
+                padding-left: 10px;
+                color: #4a148c;
+                line-height: 1.5;
+            }
 
-<h2>🕒 Breakdown of the Schedule</h2>
-<div class="section">
-    <div class="event-time">2:00 PM – Arrival & Warm-Up</div>
-    <div class="event-time">3:00 PM – Welcome & Opening Remarks</div>
-    <div class="event-time">3:15 PM – Performances Begin</div>
-    <div class="event-time">5:00 PM – Closing Remarks</div>
-    <div class="event-time">6:00 PM – Dinner</div>
-</div>
+            p.lyrics {
+                text-indent: -2.2em;
+                padding-left: 2.2em;
+                white-space: pre-line;
+                margin: 1em 0;
+            }
 
-<h2> 🙏 Sree Gurubhyo Namah: 🙏 </h2>
-<div class="section">
-    <div class="performance">
-        <div class="guru-card">
-            <img src="chetana.jpg" alt="Guru Smt. Prafulla Velury" class="guru-img">
-            <strong> Guru Smt. Prafulla Velury </strong>
+            p.lyrics br {
+                display: block;
+                content: "";
+                margin-bottom: 0.5em;
+            }
+
+            /* ---------- Responsive Layout for Student Grid ---------- */
+            .performance.student-list {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+            }
+
+            /* ---------- Global Image Handling ---------- */
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            /* ---------- Mobile Responsive Styling ---------- */
+            @media (max-width: 600px) {
+                body {
+                    padding: 10px;
+                    font-size: 0.95em;
+                }
+
+                h1,
+                h2 {
+                    font-size: 1.4em;
+                }
+
+                .section {
+                    padding: 12px;
+                    margin-bottom: 15px;
+                }
+
+                .performance {
+                    padding: 12px;
+                    margin-top: 12px;
+                }
+
+                .guru-card,
+                .student-card {
+                    width: 100px;
+                    font-size: 0.8em;
+                }
+
+                .guru-img,
+                .student-img {
+                    width: 100px;
+                    height: 100px;
+                }
+
+                .student-img:hover {
+                    /* Disable hover scale on mobile to prevent layout shift */
+                    transform: none;
+                    box-shadow: none;
+                    position: static;
+                    z-index: auto;
+                }
+
+                .performance.student-list {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .student-card {
+                    margin-bottom: 12px;
+                }
+
+                details p {
+                    font-size: 0.9em;
+                }
+
+                .footer {
+                    font-size: 1em;
+                    padding: 10px 0;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1>ॐ Rite of Offering Ankle Bells ॐ</h1>
+
+        <h2>📅 Where Abouts</h2>
+        <div class="performance">
+            <p><strong>Date:</strong> Sunday, September 21, 2025</p>
+            <p><strong>Time:</strong> 2:00 PM – 5:00 PM</p>
+            <p><strong>Location:</strong> Keefe Tech, 750 Winter St, Framingham, MA 01702</p>
         </div>
-    </div>
-</div>
 
-<h2 style="text-align:center;">👧 Sishya Gana 👧</h2>
+        <h2>🕒 Breakdown of the Schedule</h2>
+        <div class="section">
+            <div class="event-time">2:00 PM – Arrival & Warm-Up</div>
+            <div class="event-time">3:00 PM – Welcome & Opening Remarks</div>
+            <div class="event-time">3:15 PM – Performances Begin</div>
+            <div class="event-time">5:00 PM – Closing Remarks</div>
+            <div class="event-time">6:00 PM – Dinner</div>
+        </div>
 
-<div class="performance" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
-    <div class="student-card">
-        <img src="chetana.jpg" alt="Aadya Adimulam" class="student-img">
-        <strong>Aadya Adimulam</strong>
-    </div>
-    <div class="student-card">
-        <img src="chetana.jpg" alt="Aadya Bhogadi" class="student-img">
-        <strong>Aadya Bhogadi</strong>
-    </div>
-    <div class="student-card">
-        <img src="chetana.jpg" alt="Gagana B" class="student-img">
-        <strong>Gagana B</strong>
-    </div>
-    <div class="student-card">
-        <img src="chetana.jpg" alt="Anvitha G" class="student-img">
-        <strong>Anvitha G</strong>
-    </div>
-    <div class="student-card">
-        <img src="chetana.jpg" alt="Sravya Konda" class="student-img">
-        <strong>Sravya Konda</strong>
-    </div>
-    <div class="student-card">
-        <img src="chetana.jpg" alt="Srividya Konda" class="student-img">
-        <strong>Srividya Konda</strong>
-    </div>
-    <div class="student-card">
-        <img src="chetana.jpg" alt="Chetana Adwita Potunuru" class="student-img">
-        <strong>Chetana Adwita Potunuru</strong>
-    </div>
-    <div class="student-card">
-        <img src="chetana.jpg" alt="Anvitha Ramachandhrula" class="student-img">
-        <strong>Anvitha Ramachandhrula</strong>
-    </div>
-    <div class="student-card">
-        <img src="chetana.jpg" alt="Aaradhya Suragani" class="student-img">
-        <strong>Aaradhya Suragani</strong>
-    </div>
-    <div class="student-card">
-        <img src="chetana.jpg" alt="Srimayi Thuraga" class="student-img">
-        <strong>Srimayi Thuraga</strong>
-    </div>
-</div>
+        <h2>🙏 Sree Gurubhyo Namah: 🙏</h2>
+        <div class="section">
+            <div class="performance">
+                <div class="guru-card">
+                    <img src="chetana.jpg" alt="Guru Smt. Prafulla Velury" class="guru-img" />
+                    <strong> Guru Smt. Prafulla Velury </strong>
+                </div>
+            </div>
+        </div>
 
-<h2>🎤 🎻 🎼 Orchestra 🎶 </h2>
-<div class="section">
+        <h2 style="text-align: center;">👧 Sishya Gana 👧</h2>
 
-    <div class="performance">
-        <strong> Nattuvangam :</strong> Smt. Guru Prafulla Velury
-    </div>
-   
-     <div class="performance">
-        <strong>Mridangam :</strong> Sri. Sriram Rekapalli
-    </div>
-    
-     <div class="performance">
-        <strong> Vocals :</strong> Kum. Vijayasree Vittal, Smt. Guru Prafulla Velury
-    </div>
+        <div class="performance student-list" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+            <div class="student-card">
+                <img src="chetana.jpg" alt="Aadhya Adimulam" class="student-img" />
+                <strong>Aadhya Adimulam</strong>
+            </div>
+            <div class="student-card">
+                <img src="chetana.jpg" alt="Aadya Bhogadi" class="student-img" />
+                <strong>Aadya Bhogadi</strong>
+            </div>
+            <div class="student-card">
+                <img src="chetana.jpg" alt="Anvitha Gudavalli" class="student-img" />
+                <strong>Anvitha Gudavalli</strong>
+            </div>
+            <div class="student-card">
+                <img src="chetana.jpg" alt="Sravya Konda" class="student-img" />
+                <strong>Sravya Konda</strong>
+            </div>
+            <div class="student-card">
+                <img src="chetana.jpg" alt="Srividya Konda" class="student-img" />
+                <strong>Srividya Konda</strong>
+            </div>
+            <div class="student-card">
+                <img src="chetana.jpg" alt="Chetana Adwita Potunuru" class="student-img" />
+                <strong>Chetana Adwita Potunuru</strong>
+            </div>
+            <div class="student-card">
+                <img src="chetana.jpg" alt="Anvitha Ramachandhrula" class="student-img" />
+                <strong>Anvitha Ramachandhrula</strong>
+            </div>
+            <div class="student-card">
+                <img src="chetana.jpg" alt="Aaradhya Suragani" class="student-img" />
+                <strong>Aaradhya Suragani</strong>
+            </div>
+            <div class="student-card">
+                <img src="chetana.jpg" alt="Srimayi Thuraga" class="student-img" />
+                <strong>Srimayi Thuraga</strong>
+            </div>
+            <div class="student-card">
+                <img src="chetana.jpg" alt="Gagana Yelchuru" class="student-img" />
+                <strong>Gagana Yelchuru</strong>
+            </div>
+        </div>
 
-    <div class="performance">
-        <strong>Violin :</strong> Sri. Surya Sundararajan
-    </div>
+        <h2>🎤 🎻 🎼 Orchestra 🎶</h2>
+        <div class="section">
+            <div class="performance"><strong> Nattuvangam :</strong> Smt. Guru Prafulla Velury</div>
 
-    <div class="performance">
-        <strong>Veena :</strong> Sri. Srikanth Gomattam
-    </div>
+            <div class="performance"><strong>Mridangam :</strong> Sri. Sriram Rekapalli</div>
 
-    <div class="performance">
-        <strong> Flute :</strong> Kum. Krishna Sampada Velury
-    </div>
+            <div class="performance"><strong> Vocals :</strong> Kum. Vijayasree Vittal, Smt. Guru Prafulla Velury</div>
 
-    <div class="performance">
-        <strong>Special Effects : </strong>  ????
-    </div>
+            <div class="performance"><strong>Violin :</strong> Sri. Surya Sundararajan</div>
 
-</div>
+            <div class="performance"><strong>Veena :</strong> Sri. Srikanth Gomattam</div>
 
-<h2>🎭 Program Line Up</h2>
-<div class="section">
-    <div class="performance">
-        <strong>Sree Gananadha - Geetham</strong><br>
-        Composer: Sree Purandara Dasar<br>
-        Language: Sanskrit<br>
-        Raga: Malahari<br>
-        Talam: Roopakam<br>
-        <details>
-        <summary>📜 Lyrics</summary>
-        <p class="lyrics">
-            P: lambōdara lakumikara<br>
-                ambāsuta amaravinuta<br>
-            C1: śrī gaṇanātha sindūra varṇa<br>
-                karuṇā sāgara karivadana<br>
-            C2: siddha cāraṇa gaṇa sēvita<br>
-                siddhi vināyaka tē namō namō<br>
-            C3: sakala vidyādi pūjita<br>
-                sarvottama tē namō namō<br>
-        </p>
-        </details>
-    </div>
+            <div class="performance"><strong> Flute :</strong> Kum. Krishna Sampada Velury</div>
 
-    <div class="performance">
-        <strong>Thillana - Kadana Kuthuhalam</strong><br>
-        Composer: Sree Mangalampalli Bala Murali Krishna<br>
-        Language: Telugu<br>
-        Raga: KuntalavarALi<br>
-        Talam: Aadi
-        <details>
-        <summary>📜 Lyrics</summary>
-        <p class="lyrics">
-            P: lambōdara lakumikara
-                ambāsuta amaravinuta
-            C1: śrī gaṇanātha sindūra varṇa
-                karuṇā sāgara karivadana
-            C2: siddha cāraṇa gaṇa sēvita
-                siddhi vināyaka tē namō namō
-            C3: sakala vidyādi pūjita
-                sarvottama tē namō namō
-        </p>
-        </details>
-    </div>
+            <div class="performance"><strong>Special Effects : </strong> ????</div>
+        </div>
 
-    <div class="performance">
-        <strong>Shrngarinchukoni</strong><br>
-        Composer: Sree Thyagaraja<br>
-        Language: Telugu<br>
-        Raga: Śuruṭṭi <br>
-        Talam: Aadi <br>
-        <details>
-        <summary>📜 Lyrics</summary>
-        <p class="lyrics">
-        P: shrngArincukoni veDaliri shrI krSNuni tOnu santOSamuga<br>
-        AP: anga ranga vaibhOgamutO gOpAnga nA maNulu entO sogasuga<br>
-        
-        C1: navvucu kulukucu nokatE koppuna puvvula muDugucu nokatE<br>
-            tuvvucu gurulanu nokatE krSNunu ravva jEyucunu okatE vEDkaga<br>
-        
-        C2: magaDu viDunucu nokatE ravikE biguvuna jErcucu nokatE<br>
-            tagunu tana kanucu nokatE pAda yugamula nottucu nokatE vEDkaga<br>
-        
-        C3: sokkucu sOlucu nokatE krSNuni grakkuna muddiDu nokatE<br>
-            pakkaku rammanacu nokatE maDupula nakkara nosagucu nokatE vEDkaga<br>
-       
-        C4: parimaLamu landucu nokatE shrI hari hari anucunu nokatE<br>
-            uramuna jErcucu nokatE payyeta jaripi vEDukonucu nokatE vEDkaga<br>
+        <h2>🎭 Program Line Up</h2>
+        <div class="section">
+            <div class="performance">
+                <strong>Sree Gananadha - Geetham</strong><br />
+                Composer: Sree Purandara Dasar<br />
+                Language: Sanskrit<br />
+                Raga: Malahari<br />
+                Talam: Roopakam<br />
+                <details>
+                    <summary>📜 Lyrics</summary>
+                    <p class="lyrics">
+                        P: lambōdara lakumikara<br />
+                        ambāsuta amaravinuta<br />
+                        C1: śrī gaṇanātha sindūra varṇa<br />
+                        karuṇā sāgara karivadana<br />
+                        C2: siddha cāraṇa gaṇa sēvita<br />
+                        siddhi vināyaka tē namō namō<br />
+                        C3: sakala vidyādi pūjita<br />
+                        sarvottama tē namō namō<br />
+                    </p>
+                </details>
+            </div>
 
-        C5: sArasAkSa anucu nokatE ganu saiganu bilcucu nokatE<br>
-            rArA anucunu nokatE tyAgarAja sakhuDaina nokatE vEDkaga<br>
-        </p>
-        </details>
-    </div>
+            <div class="performance">
+                <strong>Thillana - Kadana Kuthuhalam</strong><br />
+                Composer: Sree Mangalampalli Bala Murali Krishna<br />
+                Language: Telugu<br />
+                Raga: KuntalavarALi<br />
+                Talam: Aadi
+                <details>
+                    <summary>📜 Lyrics</summary>
+                    <p class="lyrics">
+                        P: lambōdara lakumikara ambāsuta amaravinuta C1: śrī gaṇanātha sindūra varṇa karuṇā sāgara karivadana C2: siddha cāraṇa gaṇa sēvita siddhi vināyaka tē namō namō C3: sakala vidyādi pūjita sarvottama tē namō namō
+                    </p>
+                </details>
+            </div>
 
-    <div class="performance">
-        <strong>Krushnam Kalayasakhi - Tharangam</strong><br>
-        Composer: Sree Annamacharyaa<br>
-        Language: Sanskrit<br>
-        Raga: Devagandhari<br>
-        Talam: Aadi<br>
-        <details>
-            <summary>📜 Lyrics</summary>
-            <p class="lyrics">
-            P: kṛṣṇam kalaya sakhi sundaraṃ bāla kṛṣṇam kalaya sakhi sundaraṃ<br>
-            C1: kṛṣhṇam kathaviṣhaya tṛṣhṇam<br>
-                jagatprabha viṣhṇum surārigaṇa jiṣhnum sadā bāla<br>
-                kṛṣṇam kalaya sakhi sundaraṃ<br>
-            C2: nṛtyantam iha muhur atyantam<br>
-                aparimita bhṛtyānukūlam akhila satyaṃ sadā bāla<br>
-                kṛṣṇam kalaya sakhi sundaraṃ<br>
-            C3: artham śithilīkṛtānartham<br>
-                śrī nārāyaṇa tīrthaṃ paramapuruṣārtham sadā bāla<br>
-                kṛṣṇam kalaya sakhi sundaraṃ<br>
-        </p>
-        </details>
-    </div>
+            <div class="performance">
+                <strong>Shrngarinchukoni</strong><br />
+                Composer: Sree Thyagaraja<br />
+                Language: Telugu<br />
+                Raga: Śuruṭṭi <br />
+                Talam: Aadi <br />
+                <details>
+                    <summary>📜 Lyrics</summary>
+                    <p class="lyrics">
+                        P: shrngArincukoni veDaliri shrI krSNuni tOnu santOSamuga<br />
+                        AP: anga ranga vaibhOgamutO gOpAnga nA maNulu entO sogasuga<br />
 
-    <div class="performance">
-        <strong>Bho Sambho - ???</strong><br>
-        Composer: Sree Dayananda Saraswati ??<br>
-        Language: Sanskrit ??<br>
-        Raga: Revati ??<br>
-        Talam: Aadi ??<br>
-        <details>
-        <summary>📜 Lyrics</summary>
-        <p class="lyrics">
-            P: bhō śambhō śiva śambhō svayambhō<br>
-            AP: gaṅgādhara śaṅkara karuṇākara<br>
-                māmava bhava-sāgara tāra-ka<br>
-            C1: nirguṇa parabrahma svarūpa<br>
-                gamāgama bhūta prapañca rahita<br>
-                nija guhā-nihita nitānta ananta<br>
-                ānanda atiśaya akṣaya liṅga<br>
-            C2: dhimita dhimita dhimi dhimikiṭa kiṭaṭōm<br>
-                tōm tōm tarikiṭa tarikiṭakiṭa tōm<br>
-                mataṅga muni-vara vandita īśa<br>
-                sarva digambara veṣṭita veṣa<br>
-                nitya nirañjana nitya nateśa<br> 
-                īśa sabeśa sarveśa<br>   
-        </p>
-        </details>
-    </div>
+                        C1: navvucu kulukucu nokatE koppuna puvvula muDugucu nokatE<br />
+                        tuvvucu gurulanu nokatE krSNunu ravva jEyucunu okatE vEDkaga<br />
 
-    <div class="performance">
-        <strong>Aigiri Nandini - Stothram</strong><br>
-        Composer: Sree Adi Sankaracharya<br>
-        Language: Sanskrit<br>
-        Raga: Bhairavi ???<br>
-        Talam: Aadi<br>
-        <details>
-        <summary>📜 Lyrics</summary>
-        <p class="lyrics">
-        V1: ayi giri-nandini nandita-medhini viśva-vinodini nandinutē  <br>
-            girivara-vindhya-śiro’dhi-nivāsini viṣṇu-vilāsini jiṣṇunute  <br>
-            bhagavati hē śiti-kaṇṭha-kutumbini  bhūri-kuṭumbini bhūri-kṛtē  <br>
-            jaya jaya hē mahiṣāsura-mardini  ramya-kapardini śailasutē<br>
+                        C2: magaDu viDunucu nokatE ravikE biguvuna jErcucu nokatE<br />
+                        tagunu tana kanucu nokatE pAda yugamula nottucu nokatE vEDkaga<br />
 
-       V2 : suravaravarṣiṇi durdharadharṣiṇi <br>
-            durmukhamarṣiṇi harṣaratē<br>
-            tribhuvanapōṣiṇi śaṅkaratōṣiṇi kalmaṣamōṣiṇi ghōraratē<br>
-            danujanirōṣiṇi ditisutarōṣiṇi durmadaśōṣiṇi sindhusutē<br>
-            jaya jaya hē mahiṣāsuramardini ramyakapardini śailasutē<br>
-        
-        V3: ayi jagadamba madamba kadambavanapriyavāsini hāsaratē<br>
-            śikhari śirōmaṇi tuṅgahimālaya śṛṅganijālaya madhyagatē<br>
-            madhumadhurē madhukaiṭabhagañjini kaiṭabhabhañjini rāsaratē<br>
-            jaya jaya hē mahiṣāsuramardini ramyakapardini śailasutē<br>
-        </p>
-        </details>
-    </div>
+                        C3: sokkucu sOlucu nokatE krSNuni grakkuna muddiDu nokatE<br />
+                        pakkaku rammanacu nokatE maDupula nakkara nosagucu nokatE vEDkaga<br />
 
-    <div class="performance">
-        <strong>Mangalam</strong><br>
-        Composer:  <br>
-        Language:  <br>
-        Raga:  <br>
-        Talam:  
-    </div>
-</div>
+                        C4: parimaLamu landucu nokatE shrI hari hari anucunu nokatE<br />
+                        uramuna jErcucu nokatE payyeta jaripi vEDukonucu nokatE vEDkaga<br />
 
-<h2> 💅 🎥 Technicians 🔦 📸 </h2>
-<div class="section">
-    <div class="performance">
-        <strong> Emcee :</strong> ??
-    </div>
-   
-    <div class="performance">
-        <strong> Make Up :</strong> Smt. Madhurima Nanduri, Smt. Durga Yedugani
-    </div>
-    
-    <div class="performance">
-        <strong> Photography :</strong> Sri. J.K. Satyamoorthy
-    </div>
+                        C5: sArasAkSa anucu nokatE ganu saiganu bilcucu nokatE<br />
+                        rArA anucunu nokatE tyAgarAja sakhuDaina nokatE vEDkaga<br />
+                    </p>
+                </details>
+            </div>
 
-    <div class="performance">
-        <strong> Videography :</strong> Sri. Saravanan Meyappan
-    </div>
+            <div class="performance">
+                <strong>Krushnam Kalayasakhi - Tharangam</strong><br />
+                Composer: Sree Annamacharyaa<br />
+                Language: Sanskrit<br />
+                Raga: Devagandhari<br />
+                Talam: Aadi<br />
+                <details>
+                    <summary>📜 Lyrics</summary>
+                    <p class="lyrics">
+                        P: kṛṣṇam kalaya sakhi sundaraṃ bāla kṛṣṇam kalaya sakhi sundaraṃ<br />
+                        C1: kṛṣhṇam kathaviṣhaya tṛṣhṇam<br />
+                        jagatprabha viṣhṇum surārigaṇa jiṣhnum sadā bāla<br />
+                        kṛṣṇam kalaya sakhi sundaraṃ<br />
+                        C2: nṛtyantam iha muhur atyantam<br />
+                        aparimita bhṛtyānukūlam akhila satyaṃ sadā bāla<br />
+                        kṛṣṇam kalaya sakhi sundaraṃ<br />
+                        C3: artham śithilīkṛtānartham<br />
+                        śrī nārāyaṇa tīrthaṃ paramapuruṣārtham sadā bāla<br />
+                        kṛṣṇam kalaya sakhi sundaraṃ<br />
+                    </p>
+                </details>
+            </div>
 
-    <div class="performance">
-        <strong> Lighting & Sound :</strong> Sri. Jawed Wahid
-    </div>
+            <div class="performance">
+                <strong>Bho Sambho - ???</strong><br />
+                Composer: Sree Dayananda Saraswati ??<br />
+                Language: Sanskrit ??<br />
+                Raga: Revati ??<br />
+                Talam: Aadi ??<br />
+                <details>
+                    <summary>📜 Lyrics</summary>
+                    <p class="lyrics">
+                        P: bhō śambhō śiva śambhō svayambhō<br />
+                        AP: gaṅgādhara śaṅkara karuṇākara<br />
+                        māmava bhava-sāgara tāra-ka<br />
+                        C1: nirguṇa parabrahma svarūpa<br />
+                        gamāgama bhūta prapañca rahita<br />
+                        nija guhā-nihita nitānta ananta<br />
+                        ānanda atiśaya akṣaya liṅga<br />
+                        C2: dhimita dhimita dhimi dhimikiṭa kiṭaṭōm<br />
+                        tōm tōm tarikiṭa tarikiṭakiṭa tōm<br />
+                        mataṅga muni-vara vandita īśa<br />
+                        sarva digambara veṣṭita veṣa<br />
+                        nitya nirañjana nitya nateśa<br />
+                        īśa sabeśa sarveśa<br />
+                    </p>
+                </details>
+            </div>
 
-    <div class="performance">
-        <strong>Special : </strong>  ????
-    </div>
-</div>
+            <div class="performance">
+                <strong>Aigiri Nandini - Stothram</strong><br />
+                Composer: Sree Adi Sankaracharya<br />
+                Language: Sanskrit<br />
+                Raga: Bhairavi ???<br />
+                Talam: Aadi<br />
+                <details>
+                    <summary>📜 Lyrics</summary>
+                    <p class="lyrics">
+                        V1: ayi giri-nandini nandita-medhini viśva-vinodini nandinutē <br />
+                        girivara-vindhya-śiro’dhi-nivāsini viṣṇu-vilāsini jiṣṇunute <br />
+                        bhagavati hē śiti-kaṇṭha-kutumbini bhūri-kuṭumbini bhūri-kṛtē <br />
+                        jaya jaya hē mahiṣāsura-mardini ramya-kapardini śailasutē<br />
 
-<div class="footer">
-    📍 We look forward to seeing you! <br>
-    Please arrive on time and enjoy the performances.
-</div>
-<script src="script.js"></script>
-</body>
+                        V2 : suravaravarṣiṇi durdharadharṣiṇi <br />
+                        durmukhamarṣiṇi harṣaratē<br />
+                        tribhuvanapōṣiṇi śaṅkaratōṣiṇi kalmaṣamōṣiṇi ghōraratē<br />
+                        danujanirōṣiṇi ditisutarōṣiṇi durmadaśōṣiṇi sindhusutē<br />
+                        jaya jaya hē mahiṣāsuramardini ramyakapardini śailasutē<br />
+
+                        V3: ayi jagadamba madamba kadambavanapriyavāsini hāsaratē<br />
+                        śikhari śirōmaṇi tuṅgahimālaya śṛṅganijālaya madhyagatē<br />
+                        madhumadhurē madhukaiṭabhagañjini kaiṭabhabhañjini rāsaratē<br />
+                        jaya jaya hē mahiṣāsuramardini ramyakapardini śailasutē<br />
+                    </p>
+                </details>
+            </div>
+
+            <div class="performance">
+                <strong>Mangalam</strong><br />
+                Composer: <br />
+                Language: <br />
+                Raga: <br />
+                Talam:
+            </div>
+        </div>
+
+        <h2>💅 🎥 Technicians 🔦 📸</h2>
+        <div class="section">
+            <div class="performance"><strong> Emcee :</strong> ??</div>
+
+            <div class="performance"><strong> Make Up :</strong> Smt. Madhurima Nanduri, Smt. Durga Yedugani</div>
+
+            <div class="performance"><strong> Photography :</strong> Sri. J.K. Satyamoorthy</div>
+
+            <div class="performance"><strong> Videography :</strong> Sri. Saravanan Meyappan</div>
+
+            <div class="performance"><strong> Lighting & Sound :</strong> Sri. Jawed Wahid</div>
+
+            <div class="performance"><strong>Special : </strong> ????</div>
+        </div>
+
+        <div class="footer">
+            📍 We look forward to seeing you! <br />
+            Please arrive on time and enjoy the performances.
+        </div>
+    </body>
 </html>
