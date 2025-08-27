@@ -42,14 +42,23 @@
                 margin-left: 15px;
                 padding: 15px;
                 background: linear-gradient(to right, #f3e5f5, #ede7f6); /* Light purple gradient */
-                border-left: 5px solid #ffca28; /* Gold accent */
+                border-left: 8px solid #ffc107; /* Brighter gold + thicker */
                 border-radius: 6px;
                 margin-top: 15px;
-                box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.05);
+                box-shadow: 1px 2px 4px rgba(0,0,0,0.05);
                 position: relative;
                 transition: filter 0.3s ease;
             }
-
+            .performance::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 8px;
+                background: linear-gradient(to bottom, #ffd54f, #ffa000);
+                border-radius: 6px 0 0 6px;
+            }
             .performance strong {
                 color: #4a148c; /* Deep purple for titles */
             }
@@ -218,6 +227,11 @@
                     box-shadow: none;
                     position: static;
                     z-index: auto;
+                }
+
+                .performance {
+                    border-left: 10px solid #ffb300; /* Boldest gold for small screens */
+                    padding-left: 12px;
                 }
 
                 .performance.student-list {
