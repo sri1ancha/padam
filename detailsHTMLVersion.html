@@ -45,12 +45,12 @@
             .performance {
                 margin-top: 16px;
                 padding: 16px 16px 16px 20px;
-                background: linear-gradient(to right, #fff8e1, #ffecb3);
-                border-left: 12px solid #fbc02d;
+                background: linear-gradient(to right, #f0d9ff, #e8d9ff); /* original purple gradient */
+                border-left: 6px solid #ffca28; /* bright, visible yellow */
                 border-radius: 6px;
-                box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1);
-                position: relative;
+                box-shadow: 2px 0 6px rgba(0, 0, 0, 0.05);
             }
+
             /* Performance hover (only relevant on desktop) */
             @media (min-width: 768px) {
                 .performance:hover {
@@ -178,6 +178,10 @@
                     transform: scale(1.1);
                     box-shadow: 0 0 12px #c084fc;
                     transition: transform 0.3s ease, box-shadow 0.3s ease;
+                }
+                .performance:hover {
+                    background: linear-gradient(to right, #e1bee7, #d1c4e9);
+                    transition: background 0.3s ease-in-out;
                 }
             }
         </style>
