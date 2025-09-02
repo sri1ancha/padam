@@ -114,15 +114,34 @@
                 flex-shrink: 0;
             }
 
-            .student-card-closeup {
+            .student-closeup-grid {
                 display: flex;
+                flex-wrap: wrap;
+                gap: 16px;
+                justify-content: center;
+                margin-top: 20px;
+            }
+
+            .student-card-closeup {
+                flex: 0 1 calc(50% - 16px); /* Two cards per row with spacing */
+                display: flex;
+                align-items: center;
                 background: #f9f6fc;
                 border-radius: 6px;
                 box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
                 padding: 10px 14px;
                 gap: 12px;
-                width: 100%;
-                align-items: flex-start; /* Align image to top */
+            }
+
+            .student-img-closeup {
+                width: 90px;
+                height: 90px;
+                border-radius: 50%;
+                object-fit: cover;
+                border: 1px solid #5e239d;
+                flex-shrink: 0;
+                background-color: transparent;
+                display: block;
             }
 
             .student-card-closeup .student-info {
@@ -408,18 +427,25 @@
                 Raga: Revati ??<br />
                 Talam: Aadi ??<br />
                 Performed by : <br/>
-                <div class="student-card-closeup">
-                    <img src="chetana.jpg" alt="Gagana Yelchuru" class="student-img-closeup" />
-                    <div class="student-info"><strong>Aadhya</strong><div>
-                    <img src="chetana.jpg" alt="Gagana Yelchuru" class="student-img-closeup" />
-                    <div class="student-info"><strong>Chetana</strong></div>
+                <div class="student-closeup-grid">
+                   <div class="student-card-closeup">
+                      <img src="chetana.jpg" alt="Aadhya" class="student-img-closeup" />
+                      <div class="student-info"><strong>Aadhya</strong></div>
+                   </div>
+                   <div class="student-card-closeup">
+                      <img src="chetana.jpg" alt="Chetana" class="student-img-closeup" />
+                      <div class="student-info"><strong>Chetana</strong></div>
+                   </div>
+                   <div class="student-card-closeup">
+                      <img src="chetana.jpg" alt="Anvitha" class="student-img-closeup" />
+                      <div class="student-info"><strong>Anvitha</strong></div>
+                   </div>
+                   <div class="student-card-closeup">
+                      <img src="chetana.jpg" alt="Aaradhya" class="student-img-closeup" />
+                      <div class="student-info"><strong>Aaradhya</strong></div>
+                   </div>
                 </div>
-                <div class="student-card-closeup">
-                    <img src="chetana.jpg" alt="Gagana Yelchuru" class="student-img-closeup" />
-                    <strong>Anvitha</strong>
-                    <img src="chetana.jpg" alt="Gagana Yelchuru" class="student-img-closeup" />
-                    <strong>Aaradhya</strong>
-                </div>
+
                 <details>
                     <summary>📜 Lyrics</summary>
                     <p class="lyrics">
