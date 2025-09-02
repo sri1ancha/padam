@@ -114,43 +114,30 @@
                 flex-shrink: 0;
             }
 
-            /* Name beside image */
-            .student-card strong {
-                font-size: 1em;
-                color: #4a148c;
-                text-align: left;
-            }
-
-            /* Individual student card */
             .student-card-closeup {
                 display: flex;
-                align-items: center;
                 background: #f9f6fc;
                 border-radius: 6px;
                 box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
                 padding: 10px 14px;
                 gap: 12px;
                 width: 100%;
+                align-items: flex-start; /* Align image to top */
             }
 
-            /* Student image */
-            .student-img-closeup {
-                width: 90px;
-                height: 90px;
-                border-radius: 50%;
-                object-fit: cover;
-                border: 1px solid #5e239d;
-                flex-shrink: 0;
+            .student-card-closeup .student-info {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end; /* Push name to bottom */
+                height: 100%; /* Take full height to align bottom */
             }
 
-            /* Name beside image */
             .student-card-closeup strong {
                 font-size: 1em;
                 color: #4a148c;
-                text-align: bottom;
+                text-align: left;
             }
 
-            
             /* Expandable details */
             details summary {
                 cursor: pointer;
@@ -423,9 +410,9 @@
                 Performed by : <br/>
                 <div class="student-card-closeup">
                     <img src="chetana.jpg" alt="Gagana Yelchuru" class="student-img-closeup" />
-                    <strong>Aadhya</strong>
+                    <div class="student-info"><strong>Aadhya</strong><div>
                     <img src="chetana.jpg" alt="Gagana Yelchuru" class="student-img-closeup" />
-                    <strong>Chetana</strong>
+                    <div class="student-info"><strong>Chetana</strong></div>
                 </div>
                 <div class="student-card-closeup">
                     <img src="chetana.jpg" alt="Gagana Yelchuru" class="student-img-closeup" />
