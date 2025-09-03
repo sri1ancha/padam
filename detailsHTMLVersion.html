@@ -61,19 +61,16 @@
          /* Guru card */
          .guru-card {
          display: flex;
-         justify-content: space-between;
+         flex-direction: column-reverse;
          gap: 20px;
          align-items: flex-start;
-         flex-wrap: wrap;
          text-align: left;
          }
          .guru-text {
-         flex: 2;
-         min-width: 250px;
+         width: 100%;
          }
          .guru-profile {
-         flex: 1;
-         min-width: 160px;
+         align-self: flex-end;  /* pushes to right on mobile */
          display: flex;
          flex-direction: column;
          align-items: center;
@@ -182,6 +179,19 @@
          body {
          max-width: 800px;
          margin: auto;
+         }
+         .guru-card {
+         flex-direction: row;
+         justify-content: space-between;
+         align-items: flex-start;
+         }
+         .guru-text {
+         flex: 2;
+         }
+         .guru-profile {
+         flex: 1;
+         align-items: center;
+         text-align: center;
          }
          .guru-img {
          width: 140px;
