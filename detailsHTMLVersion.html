@@ -113,29 +113,35 @@
          }
          .student-closeup-grid {
          display: grid;
-         grid-template-columns: repeat(2, 1fr);  /* 2 per row */
+         grid-template-columns: repeat(2, 1fr); /* 2 per row on mobile */
          gap: 16px;
-         margin-top: 05px;
+         margin-top: 12px;
          width: 100%;
          }
          .student-card-closeup {
          display: flex;
          flex-direction: column;
          align-items: center;
-         background: linear-gradient(to right, #f0d9ff, #e8d9ff);  /* Match performance card */
+         background: linear-gradient(to right, #f0d9ff, #e8d9ff);
          border-radius: 8px;
          box-shadow: 0 2px 6px rgba(94, 35, 157, 0.08);
          padding: 16px;
          text-align: center;
-         width: 100%;
          }
          .student-img-closeup {
-         background-color: transparent;  /* Remove image bg */
-         box-shadow: none;                /* Remove shadow */
-         border: 2px solid #5e239d;      /* Keep border */
+         width: 120px;
+         height: 120px;
+         border-radius: 50%;
+         object-fit: cover;
+         border: 2px solid #5e239d;
+         background-color: transparent;
+         box-shadow: none;
          }
-         .student-card-closeup .student-info {
+         .student-info {
          margin-top: 10px;
+         font-weight: bold;
+         color: #4a148c;
+         font-size: 1em;
          }
          .student-card-closeup strong {
          font-size: 1em;
@@ -401,28 +407,24 @@
             Raga: Revati ??<br />
             Talam: Aadi ??<br />
             Performed by : <br/>
-            <!--</div>
-               <div class="section"> -->
             <div class="student-closeup-grid">
                <div class="student-card-closeup">
                   <img src="chetana.jpg" alt="Aadhya" class="student-img-closeup" />
                   <div class="student-info"><strong>Aadhya</strong></div>
-              <!-- </div>
-               <div class="student-card-closeup"> -->
+               </div>
+               <div class="student-card-closeup">
                   <img src="chetana.jpg" alt="Chetana" class="student-img-closeup" />
                   <div class="student-info"><strong>Chetana</strong></div>
                </div>
                <div class="student-card-closeup">
                   <img src="chetana.jpg" alt="Anvitha" class="student-img-closeup" />
                   <div class="student-info"><strong>Anvitha</strong></div>
-               <!--</div>
-               <div class="student-card-closeup"> -->
+               </div>
+               <div class="student-card-closeup">
                   <img src="chetana.jpg" alt="Aaradhya" class="student-img-closeup" />
                   <div class="student-info"><strong>Aaradhya</strong></div>
                </div>
             </div>
-            <!-- </div> 
-               <div class="performance"> -->
             <details>
                <summary>📜 Lyrics</summary>
                <p class="lyrics">
