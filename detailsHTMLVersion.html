@@ -158,6 +158,29 @@
          font-size: 1em;
          color: #4a148c;
          }
+
+         /* Make student card group fill full width on mobile */
+.student-card-grp-closeup {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* Make image responsive, full width but limited height */
+.student-img-grp-closeup {
+  width: 100%;
+  max-width: 500px; /* optional: max size */
+  height: auto;
+  object-fit: contain; /* or "cover" depending on your design */
+  border-radius: 8px;
+  border: 2px solid #5e239d;
+  display: block;
+}
+
          /* Expandable details */
          details summary {
          cursor: pointer;
@@ -191,7 +214,16 @@
          color: #512da8;
          padding-bottom: 30px;
          }
+         
          /* Responsive Tweaks */
+         @media (max-width: 600px) {
+  .student-img-grp-closeup {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
          @media (min-width: 768px) {
          body {
          max-width: 800px;
@@ -264,7 +296,7 @@
                <div class="guru-text">
                   <p><strong>Smt. Prafulla Velury</strong>, recipient of the prestigious titles <strong>“Natyasudhalahari”</strong> and <strong>“Upasana Kalashree”</strong>, is a highly respected dance educator, acclaimed Kuchipudi dancer, choreographer, nattuvannar, and accomplished Carnatic vocalist.</p>
                   <p>She is the founder of <strong>PADAM (Prafulla's Academy of Kuchipudi Dance and Carnatic Music)</strong>, an institution committed to nurturing and training the next generation of classical artists.</p>
-                  <p>Her artistic journey was shaped under the tutelage of <strong>Guru Late Sri Yeleswarapu Suryaprakash Sharma</strong> and <strong>Guru “Nataraja Hamsa” Sri D.V. Satyakumar</strong>, a disciple of the legendary <strong>Dr. Vempati Chinna Satyam</strong>. Through this lineage, she profoundly embodies the essence of the <em>Guru-Shishya Parampara</em>.</p>
+                  <p>Her artistic journey was shaped under the tutelage of <strong>Guru Late. Sri Yeleswarapu Suryaprakash Sharma</strong> and <strong>Guru “Nataraja Hamsa” Sri D.V. Satyakumar</strong>, a disciple of the legendary <strong>Dr. Vempati Chinna Satyam</strong>. Through this lineage, she profoundly embodies the essence of the <em>Guru-Shishya Parampara</em>.</p>
                   <p>Her pedagogy emphasizes a compassionate and rigorous teacher-student relationship, ensuring the transmission of Kuchipudi’s technique, aesthetics, and cultural values with integrity and devotion—preserving the sanctity and continuity of the tradition for generations to come.</p>
                </div>
                <div class="guru-profile">
@@ -370,6 +402,9 @@
             Raga: Śuruṭṭi <br />
             Talam: Aadi <br />
             Performed by : Aadya, Srividya, Gagana<br />
+            <div class="student-card-grp-closeup">
+               <img src="chetana.jpg" alt="Aadya" class="student-img-grp-closeup" />
+            </div>
             <details>
                <summary>📜 Lyrics</summary>
                <p class="lyrics">
@@ -395,6 +430,11 @@
             Raga: Devagandhari<br />
             Talam: Aadi<br />
             Performed by : Anvitha G, Sravya K, Srimayi T<br />
+            <div class="student-closeup-grid">
+               <div class="student-card-closeup">
+                  <img src="chetana.jpg" alt="Aadhya" class="student-img-closeup" />
+               </div>
+            </div>
             <details>
                <summary>📜 Lyrics</summary>
                <p class="lyrics">
@@ -413,7 +453,7 @@
          </div>
          <div class="performance">
             <strong>Bho Sambho - ???</strong><br />
-            Composer: Sree Dayananda Saraswati ??<br />
+            Composer: Sree Dayananda Saraswati<br />
             Language: Sanskrit<br />
             Raga: Revati<br />
             Talam: Aadi<br />
@@ -421,7 +461,19 @@
             <div class="student-closeup-grid">
                <div class="student-card-closeup">
                   <img src="chetana.jpg" alt="Aadhya" class="student-img-closeup" />
-                  <div class="student-info"><strong>Aadhya, Chetana, Anvita, Aaradhya (names to be adjusted to fit how ever they are in pic)</strong></div>
+                  <div class="student-info"><strong>Aadhya</strong></div>
+               </div>
+               <div class="student-card-closeup">
+                  <img src="chetana.jpg" alt="Aadhya" class="student-img-closeup" />
+                  <div class="student-info"><strong>Chetana</strong></div>
+               </div>
+               <div class="student-card-closeup">
+                  <img src="chetana.jpg" alt="Aadhya" class="student-img-closeup" />
+                  <div class="student-info"><strong>Anvita</strong></div>
+               </div>
+               <div class="student-card-closeup">
+                  <img src="chetana.jpg" alt="Aadhya" class="student-img-closeup" />
+                  <div class="student-info"><strong>Aaradhya</strong></div>
                </div>
             </div>
             <details>
@@ -447,7 +499,7 @@
             <strong>Aigiri Nandini - Stothram</strong><br />
             Composer: Sree Adi Sankaracharya<br />
             Language: Sanskrit<br />
-            Raga: Bhairavi ???<br />
+            Raga: Bhairavi<br />
             Talam: Aadi<br />
             <details>
                <summary>📜 Lyrics</summary>
@@ -510,9 +562,9 @@
       </div>
       <h2>💅 🎥 Technicians 🔦 📸</h2>
       <div class="section">
-         <div class="performance"><strong> Make Up :</strong> Smt. Madhurima Nanduri, Smt. Durga Yedugani, Smt. KrishnaPriya Ramachandrula</div>
-         <div class="performance"><strong> Emcee :</strong> Kum. Riya Yedugani, Kum. Srinika</div>
-         <div class="performance"><strong> Mentors :</strong> Kum. Krishna Sampada Velury, Kum. Raksha Krishna Nanduri, Kum. Aarna, Kum. Richa Yedugani</div>
+         <div class="performance"><strong> Make Up :</strong> Smt. Madhurima Nanduri, Smt. SriDurga Yedugani, Smt. KrishnaPriya Ramachandrula</div>
+         <div class="performance"><strong> Emcee :</strong> Kum. Riya Sri Yedugani, Kum. Srinika</div>
+         <div class="performance"><strong> Mentors :</strong> Kum. Krishna Sampada Velury, Kum. Raksha Krishna Nanduri, Kum. Aarna, Kum. Richa Sri Yedugani</div>
          <div class="performance"><strong> Photography :</strong> Sri. J.K. Satyamoorthy</div>
          <div class="performance"><strong> Videography :</strong> Sri. Saravanan Meyappan</div>
          <div class="performance"><strong> Lighting & Sound :</strong> Sri. Jawed Wahid</div>
