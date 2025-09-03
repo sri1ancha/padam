@@ -114,23 +114,23 @@
             }
 
             .student-closeup-grid {
-                display: flex;
-                flex-wrap: wrap;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);  /* 2 per row on all screens */
                 gap: 16px;
                 justify-content: center;
                 margin-top: 20px;
+                width: 100%;
             }
 
             .student-card-closeup {
-                flex: 0 1 calc(50% - 16px); /* Two per row with spacing */
                 display: flex;
-                flex-direction: column; /* Stack image above name */
+                flex-direction: column;
                 align-items: center;
                 background: rgba(94, 35, 157, 0.06); /* Subtle purple background */
                 border-radius: 6px;
                 box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
                 padding: 16px;
-                gap: 10px;
+                text-align: center;
             }
 
             .student-img-closeup {
@@ -445,7 +445,7 @@
                       <div class="student-info"><strong>Aaradhya</strong></div>
                    </div>
                 </div>
-                <div class="performance">
+            <div class="performance">
                 <details>
                     <summary>📜 Lyrics</summary>
                     <p class="lyrics">
