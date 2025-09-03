@@ -66,12 +66,13 @@
          gap: 16px;
          align-items: flex-start;
          justify-content: space-between;
-         flex-wrap: wrap; /* allow wrap on very small devices */
+         flex-wrap: nowrap; /* prevent wrapping */
          }
          .guru-text,
          .guru-profile {
-         flex: 1 1 50%; /* 🔥 each takes half the width */
-         box-sizing: border-box;
+            flex: 1 1 50%; /* 🔥 each takes half the width */
+            box-sizing: border-box;
+            min-width: 0; /* 🔧 prevent overflowing */
          }
          .guru-profile {
          display: flex;
@@ -225,6 +226,12 @@
          background: linear-gradient(to right, #e1bee7, #d1c4e9);
          transition: background 0.3s ease-in-out;
          }
+         }
+
+         @media (min-width: 480px) {
+           .guru-card {
+                flex-direction: row; /* side by side from 480px up */
+            }
          }
       </style>
    </head>
