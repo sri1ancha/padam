@@ -168,12 +168,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: rgba(94, 35, 157, 0.06); /* Soft purple background */
+    background: linear-gradient(to right, #f0d9ff, #e8d9ff);  /* Match performance card */
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(94, 35, 157, 0.08); /* Subtle purple glow */
+    box-shadow: 0 2px 6px rgba(94, 35, 157, 0.08);
     padding: 16px;
     text-align: center;
-    width: 100%;  /* Make sure card fills the grid cell */
+    width: 100%;
 }
 
 .student-img-closeup {
@@ -182,8 +182,8 @@
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid #5e239d;
-    background-color: rgba(94, 35, 157, 0.06);  /* Match card background */
-    box-shadow: 0 2px 6px rgba(94, 35, 157, 0.15); /* Subtle lift */
+    background-color: transparent;  /* No clash with gradient */
+    box-shadow: 0 2px 4px rgba(94, 35, 157, 0.12);  /* Slight lift */
 }
 
 .student-card-closeup .student-info {
