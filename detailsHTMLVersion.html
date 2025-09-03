@@ -64,21 +64,20 @@
          display: flex;
          flex-direction: row; /* 🔄 change from column-reverse */
          gap: 16px;
-         align-items: flex-start;
+         align-items: stretch;
          justify-content: space-between;
          flex-wrap: nowrap; /* prevent wrapping */
          }
-         .guru-text,
-         .guru-profile {
-            flex: 1 1 50%; /* 🔥 each takes half the width */
-            box-sizing: border-box;
-            min-width: 0; /* 🔧 prevent overflowing */
+         .guru-text {
+            flex: 1 ;
          }
          .guru-profile {
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-         text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            justify-content: center; /* 👈 Center image+name vertically */
+            padding: 16px 0; /* Optional: Add vertical breathing room */
          }
          .guru-img {
          width: 140px;
@@ -263,15 +262,15 @@
       <div class="section">
          <div class="performance">
             <div class="guru-card">
-               <div class="guru-profile">
-                  <strong>Guru Smt. Prafulla Velury</strong>
-                  <img src="chetana.jpg" alt="Guru Smt. Prafulla Velury" class="guru-img" />
-               </div>
                <div class="guru-text">
                   <p><strong>Smt. Prafulla Velury</strong>, recipient of the prestigious titles <strong>“Natyasudhalahari”</strong> and <strong>“Upasana Kalashree”</strong>, is a highly respected dance educator, acclaimed Kuchipudi dancer, choreographer, nattuvannar, and accomplished Carnatic vocalist.</p>
                   <p>She is the founder of <strong>PADAM (Prafulla's Academy of Kuchipudi Dance and Carnatic Music)</strong>, an institution committed to nurturing and training the next generation of classical artists.</p>
                   <p>Her artistic journey was shaped under the tutelage of <strong>Guru Late Sri Yeleswarapu Suryaprakash Sharma</strong> and <strong>Guru “Nataraja Hamsa” Sri D.V. Satyakumar</strong>, a disciple of the legendary <strong>Dr. Vempati Chinna Satyam</strong>. Through this lineage, she profoundly embodies the essence of the <em>Guru-Shishya Parampara</em>.</p>
                   <p>Her pedagogy emphasizes a compassionate and rigorous teacher-student relationship, ensuring the transmission of Kuchipudi’s technique, aesthetics, and cultural values with integrity and devotion—preserving the sanctity and continuity of the tradition for generations to come.</p>
+               </div>
+               <div class="guru-profile">
+                  <img src="chetana.jpg" alt="Guru Smt. Prafulla Velury" class="guru-img" />
+                  <strong>Guru Smt. Prafulla Velury</strong>
                </div>
             </div>
          </div>
