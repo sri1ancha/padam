@@ -87,7 +87,7 @@
                 width: 175px;
                 height: 175px;
                 border-radius: 50%;
-                object-fit: cover;
+                object-fit: contain;
                 border: 2px solid #5e239d;
                 margin-bottom: 8px;
             }
@@ -111,19 +111,22 @@
                 width: 100%;
             }
             /* Logo image */
-            .padam_logo {
-                width: 75px;
-                height: 75px;
-                border-radius: 50%;
-                object-fit: cover;
-                border: 1px solid #5e239d;
-                flex-shrink: 0;
+            .padam-logo-img {
+                display: block;
+                margin: 0 auto 10px auto; /* centers the logo and gives spacing */
+                max-width: 90px; /* reduce logo size */
+                height: auto;
             }
-            
+
             /* Student image */
             .student-img {
+                /*
                 width: 125px;
                 height: 125px;
+                */
+                width: 100%;
+                max-width: 125px;
+                height: auto;
                 border-radius: 50%;
                 object-fit: cover;
                 border: 1px solid #5e239d;
@@ -469,11 +472,11 @@
                 Raga: Mukhari<br />
                 Talam: Aadi<br />
                 Performed by : Anvitha G, Srimayi T, Sravya K. (your left to right)<br />
-                <div class="student-closeup-grid">
-                    <div class="student-card-closeup">
+                <!-- <div class="student-closeup-grid"> -->
+                    <div class="student-card-grp-closeup">
                         <img src="Krishnam_grp.jpg" alt="Aadhya" class="student-img-closeup" />
                     </div>
-                </div>
+                <!-- </div> -->
                 <details>
                     <summary>📜 Lyrics</summary>
                     <p class="lyrics">
