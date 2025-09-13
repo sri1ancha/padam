@@ -123,6 +123,18 @@
                 gap: 12px;
                 width: 100%;
             }
+            .lord-container {
+                display: flex;
+                justify-content: space-between; /* pushes one image left, the other right */
+                align-items: center;
+                padding: 20px;
+            }
+
+            .lord-img {
+                max-width: 90px;
+                height: auto;
+            }
+
             /* Logo image */
             .padam-logo-img {
                 display: block;
@@ -304,9 +316,9 @@
         </style>
     </head>
     <body>
-        <div>
-            <img src="Ganesha.png" alt="Ganesha" class="padam-logo-img" />
-            <img src="Nataraja.png" alt="Nataraja" class="padam-logo-img" />
+        <div class="lord-container">
+            <img src="Ganesha.png" alt="Ganesha" class="lord-img" />
+            <img src="Nataraja.png" alt="Nataraja" class="lord-img" />
         </div>
         <div>
             <img src="padam_logo.jpg" alt="PADAM" class="padam-logo-img" />
